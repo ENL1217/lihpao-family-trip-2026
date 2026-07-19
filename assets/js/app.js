@@ -86,6 +86,12 @@
           items.forEach((item) => {
             const groups = (item.dataset.groups || "").split(" ");
             item.hidden = filter !== "all" && !groups.includes(filter);
+
+            const lanes = item.querySelectorAll("[data-lane-group]");
+            lanes.forEach((lane) => {
+              lane.hidden = filter !== "all" && lane.dataset.laneGroup !== filter;
+            });
+            item.classList.toggle("single-lane", filter !== "all" && lanes.length > 0 && !item.hidden);
           });
         });
       });

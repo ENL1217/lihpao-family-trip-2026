@@ -918,6 +918,21 @@ h3 {
   border-left: 1px solid var(--line);
 }
 
+.team-lanes > div {
+  min-width: 0;
+}
+
+.split-item.single-lane {
+  grid-template-columns: 94px minmax(0, 1fr);
+}
+
+.split-item.single-lane > [data-lane-group]:not([hidden]) {
+  grid-column: 2;
+  padding-left: 0;
+  border-top: 0;
+  border-left: 0;
+}
+
 .strategy {
   margin-top: 24px;
   border: 1px solid var(--line);
@@ -2190,6 +2205,10 @@ body {
   grid-template-columns: 92px minmax(0, 1fr) minmax(0, 1fr);
 }
 
+.split-item.single-lane {
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
 .schedule-item::before {
   top: 34px;
   left: 108px;
@@ -2802,6 +2821,10 @@ body {
   }
 
   .split-item > div:last-child {
+    grid-column: 1;
+  }
+
+  .split-item.single-lane > [data-lane-group]:not([hidden]) {
     grid-column: 1;
   }
 }
