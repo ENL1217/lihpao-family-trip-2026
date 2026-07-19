@@ -1,0 +1,10 @@
+# This local planner contains prices and must never be published.
+private/
+
+# Original family photos are local source material, not public site assets.
+assets/images/family-hero.webp
+assets/images/family-table.webp
+
+# Local preview artifacts.
+screenshots/
+*.log
